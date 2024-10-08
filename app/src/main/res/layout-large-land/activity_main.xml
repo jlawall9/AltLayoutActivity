@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="60dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Name" />
+
+        <ImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="984dp"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/directReportsLabel"
+            app:layout_constraintHorizontal_bias="0.032"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/emailLabel"
+            android:layout_width="143dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="192dp"
+            android:paddingTop="8dp"
+            android:text="Email"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toEndOf="@+id/profile_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintEnd_toEndOf="@+id/emailLabel"
+            app:layout_constraintStart_toStartOf="@+id/emailLabel"
+            tools:layout_editor_absoluteY="263dp"
+            tools:text="Email Address" />
+
+        <TextView
+            android:id="@+id/extensionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Extension"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@+id/extension"
+            app:layout_constraintStart_toStartOf="@+id/extension"
+            tools:layout_editor_absoluteY="364dp" />
+
+        <TextView
+            android:id="@+id/extension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:layout_editor_absoluteX="424dp"
+            tools:layout_editor_absoluteY="429dp"
+            tools:text="Extension" />
+
+        <TextView
+            android:id="@+id/departmentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="199dp"
+            android:layout_marginEnd="442dp"
+            android:paddingTop="8dp"
+            android:text="Department"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toStartOf="@+id/directReportsRecyclerView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="171dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            app:layout_constraintEnd_toStartOf="@+id/directReportsRecyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/departmentLabel"
+            tools:text="Department name" />
+
+        <TextView
+            android:id="@+id/supervisorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:paddingTop="8dp"
+            android:text="Supervisor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@+id/supervisor"
+            app:layout_constraintStart_toStartOf="@+id/supervisor" />
+
+        <TextView
+            android:id="@+id/supervisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="247dp"
+            android:layout_marginBottom="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/directReportsRecyclerView"
+            tools:text="Supervisor's Name" />
+
+        <TextView
+            android:id="@+id/directReportsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Direct Reports"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:layout_editor_absoluteX="1329dp"
+            tools:layout_editor_absoluteY="150dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/directReportsRecyclerView"
+            android:layout_width="260dp"
+            android:layout_height="264dp"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/directReportsLabel"
+            app:layout_constraintStart_toStartOf="@+id/directReportsLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
